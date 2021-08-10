@@ -27,15 +27,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Laila:wght@500&display=swap');
 
 section {
 	position: relative;
+	height: 100%;
 	.label{
 		font-family: 'Laila', sans-serif;
+		top: 0;
 		position: absolute;
-		color: blue;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 30px;
+		align-content: left;
+		margin-left: 50px;
+		height:100%;
+
 		font-size: 50pt;
+		color: white;
 		z-index:1;
 
 		.divisor{
@@ -45,12 +54,11 @@ section {
 		}
 
 		a{
-			margin-top: 10px;
+			color: white;
 			display: flex;
-			justify-content: space-around;
-			background: none;
-			text-align: left;
-			border: 2px solid grey;
+			align-items: center;
+			padding: 5px;
+			border: 3px solid grey;
 			border-radius: 10px;
 			h3{
 				color: white;
@@ -63,7 +71,13 @@ section {
 			img{
 				width:25%;
 			}
+			&:hover{
+				border-color: orangered;
+				transition-duration: 0.2s;
+				transform: translateY(-3px);
+			}
 		}
+
 	}
 }
 
