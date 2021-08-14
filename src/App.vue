@@ -1,19 +1,22 @@
 <template>
 	<Header />
 	<Introduction />
+	<NavNews />
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue'
 import Introduction from './components/Sec_introduction.vue'
+import NavNews from './components/Nav_news.vue'
 
 export default {
 	name: 'App',
 	components: {
 		//HelloWorld,
 		Header,
-		Introduction
+		Introduction,
+		NavNews
 	}
 }
 </script>
@@ -25,12 +28,12 @@ export default {
 	border:0;
 	box-sizing: border-box;
 	text-decoration:none;
+	font-family: 'Laila', sans-serif;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
 }
 </style>
