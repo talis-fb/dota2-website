@@ -2,6 +2,7 @@
 	<Header />
 	<Introduction />
 	<NavNews />
+	<SecHeroes />
 </template>
 
 <script>
@@ -9,6 +10,7 @@
 import Header from './components/Header.vue'
 import Introduction from './components/Sec_introduction.vue'
 import NavNews from './components/Nav_news.vue'
+import SecHeroes from './components/Sec_heroes.vue'
 
 export default {
 	name: 'App',
@@ -16,7 +18,8 @@ export default {
 		//HelloWorld,
 		Header,
 		Introduction,
-		NavNews
+		NavNews,
+		SecHeroes
 	}
 }
 </script>
