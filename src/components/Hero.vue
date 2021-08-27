@@ -1,8 +1,8 @@
 <template>
 	<a class="hero"  href="/">
-		<img src={{ heroes_source[0] }} alt="">
-		<div>
-			<img src="" alt="">
+		<img class="hero-photo" v-bind:src="heroes_source[3]" alt="">
+		<div class="label">
+			<img :src="atributos_source[0]" height="10px" alt="">
 			<span>{{ name }}</span>
 		</div>
 	</a>
@@ -53,19 +53,52 @@ const heroes_source = [
 ]
 
 export default {
-	name: 'App',
+	name: 'Hero',
+	props: [ 'name'],
 	data: () => {
 		return {
 			atributos_source,
 			heroes_source
 		}
 	},
-	props: [ 'name', 'type', 'img_source' ]
 }
 </script>
 
 <style lang="scss" scoped>
 .hero {
-	height: 10px;
+	height: 127px;
+	width: 225px;
+	position: relative;
+	display: inline-block;
+	transition: ease 0.3s;
+
+	.hero-photo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top:0;
+	}
+	.label {
+		position: relative;
+		z-index: 1;
+		height: 100%;
+		padding: 5px;
+		font-size: 18px;
+		display: none;
+	}
+
+	&:hover {
+		z-index: 5;
+		transform: scale(1.25);
+		.label {
+			display: flex;
+			align-items: flex-end;
+			img {
+				width: 45px;
+				height: 45px;
+			}
+		}
+	}
 }
 </style>

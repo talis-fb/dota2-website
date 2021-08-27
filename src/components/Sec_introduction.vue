@@ -5,7 +5,7 @@
 		</div>
 
 		<div class="label">
-			<div>
+			<div class="main">
 				“A Modern Multiplayer Masterpiece.”
 			</div>
 			<div class="divisor"></div>
@@ -40,12 +40,17 @@ section {
 		justify-content: center;
 		gap: 30px;
 		align-content: left;
-		margin-left: 50px;
+		margin-left: 100px;
 		height:100%;
+		max-width: 60%;
 
-		font-size: 50pt;
+		font-size: 60px;
 		color: white;
 		z-index:1;
+
+		.main {
+			text-align: left;
+		}
 
 		.divisor{
 			width: 80px;
@@ -54,6 +59,8 @@ section {
 		}
 
 		a{
+			width: 401px;
+			height: 78px;
 			color: white;
 			display: flex;
 			align-items: center;
@@ -61,15 +68,19 @@ section {
 			border: 3px solid grey;
 			border-radius: 10px;
 			h3{
+				font-size: 22px;
 				color: white;
 				text-decoration:none;
 				text-decoration-line: none;
 			}
 			h4{
+				font-size: 15px;
 				color:grey;
 			}
 			img{
 				width:25%;
+				width: 48px;
+				height: 48px;
 			}
 			&:hover{
 				border-color: orangered;

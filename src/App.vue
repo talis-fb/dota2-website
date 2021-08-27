@@ -3,6 +3,7 @@
 	<Introduction />
 	<NavNews />
 	<SecHeroes />
+	<GridHeroes />
 </template>
 
 <script>
@@ -11,6 +12,7 @@ import Header from './components/Header.vue'
 import Introduction from './components/Sec_introduction.vue'
 import NavNews from './components/Nav_news.vue'
 import SecHeroes from './components/Sec_heroes.vue'
+import GridHeroes from './components/Sec_grid_heroes.vue'
 
 export default {
 	name: 'App',
@@ -19,7 +21,8 @@ export default {
 		Header,
 		Introduction,
 		NavNews,
-		SecHeroes
+		SecHeroes,
+		GridHeroes
 	}
 }
 </script>
@@ -31,6 +34,7 @@ export default {
 	border:0;
 	box-sizing: border-box;
 	text-decoration:none;
+	color: white;
 	font-family: 'Laila', sans-serif;
 }
 #app {
