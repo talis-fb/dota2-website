@@ -43,6 +43,7 @@ export default {
 	position: relative;
 	display: inline-block;
 	transition: ease 0.3s;
+	box-shadow: 1px 1px 4px #000;
 
 	.hero-photo {
 		position: absolute;
@@ -76,6 +77,9 @@ export default {
 	&:hover {
 		z-index: 5;
 		transform: scale(1.25);
+
+		box-shadow:inset 0px -20px 30px black;
+
 		.label {
 			transform: translateY(0px);
 			bottom: 0;
