@@ -7,7 +7,6 @@
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue'
 import Introduction from './components/Sec_introduction.vue'
 import NavNews from './components/Nav_news.vue'
@@ -17,7 +16,6 @@ import GridHeroes from './components/Sec_grid_heroes.vue'
 export default {
 	name: 'App',
 	components: {
-		//HelloWorld,
 		Header,
 		Introduction,
 		NavNews,
@@ -27,15 +25,25 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Laila:wght@500&display=swap');
+@import './global';
+
+/*
+Fontes :
+	'Acme' 
+	'Vollkorn' 
+	'Alegreya' */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Alegreya:wght@400;500&family=Vollkorn:wght@400;500&display=swap');
+/********/
+
 *{
 	margin: 0;
 	border:0;
 	box-sizing: border-box;
 	text-decoration:none;
 	color: white;
-	font-family: 'Laila', sans-serif;
+	font-family: $font, sans-serif;
 }
 #app {
 	-webkit-font-smoothing: antialiased;

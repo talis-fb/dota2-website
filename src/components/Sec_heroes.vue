@@ -24,6 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Laila:wght@500&display=swap');
+@import '../global';
 
 .herois {
 	position: relative;
@@ -46,10 +47,6 @@ export default {
 		align-self: center;
 		max-width: 50%;
 
-		//background-image: url("https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/3703047/deaae2bcc11b7ef6963ade2793e8f619ed20546a.jpg");
-		//background-repeat: no-repeat;
-		//background-size: cover;
-		//background-position: center;
 		h1{
 			color: white;
 			font-size: 30pt;

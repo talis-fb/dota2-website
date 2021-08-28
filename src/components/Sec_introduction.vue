@@ -6,7 +6,7 @@
 
 		<div class="label">
 			<div class="main">
-				“A Modern Multiplayer Masterpiece.”
+				"A MODERN MULTIPLAYER MASTERPIECE."
 			</div>
 			<div class="divisor"></div>
 			<a href="https://store.steampowered.com/app/570/Dota_2/">
