@@ -1,6 +1,5 @@
 <template>
-	<a class="hero"  href="/">
-		<img class="hero-photo" v-bind:src="img || sem_imagem" alt="">
+	<a class="hero" :style="{'background-image': `url(${img})`}"  href="/">
 		<div class="label">
 			<div class="content">
 				<img :src="return_atb_src(type) || sem_atb" height="10px" alt="">
@@ -38,12 +37,17 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
+	position: relative;
 	height: 127px;
 	width: 225px;
-	position: relative;
 	display: inline-block;
 	transition: ease 0.3s;
 	box-shadow: 1px 1px 4px #000;
+
+	//Image
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 
 	.hero-photo {
 		position: absolute;
@@ -63,11 +67,11 @@ export default {
 		bottom: 0;
 		transform: translateY(30px);
 		padding: 5px;
-		font-size: 18px;
 		opacity: 0;
 		transition: ease 0.2s;
 
 		.content{
+			font-size: 100%;
 			display: flex;
 			align-items: center;
 			gap: 5px;
@@ -81,7 +85,7 @@ export default {
 		box-shadow:inset 0px -20px 30px black;
 
 		.label {
-			transform: translateY(0px);
+			transform: none; 
 			bottom: 0;
 			opacity: 1;
 		}

@@ -1,8 +1,8 @@
 <template>
 	<section class="herois">
-		<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//home/heroes_full.jpg" alt="">
+		<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/home/heroes_full.jpg" alt="">
 		<div class="content">
-			<h1>Quem você escolherá?</h1>
+			<h1>QUEM VOCÊ ESCOLHERÁ?</h1>
 			<div class="divisor"></div>
 			<h3>De engenhosos magos a brutamontes destemidos, passando por rebeldes astutos, a gama de heróis do Dota 2 é enorme e incrivelmente diversa. Lance habilidades incríveis e Ultimates devastadoras no seu caminho para a vitória.</h3>
 			<a href="/">
@@ -33,7 +33,8 @@ export default {
 	justify-content: center;
 	align-items: center;
 
-	background-color: grey;
+	margin-bottom: 50px;
+
 
 	img {
 		width: 100%;
@@ -46,10 +47,11 @@ export default {
 		width: 1000px;
 		align-self: center;
 		max-width: 50%;
+		background-color: grey;
 
 		h1{
 			color: white;
-			font-size: 30pt;
+			font-size: 70px;
 		}
 		h3 {
 			color:white;
