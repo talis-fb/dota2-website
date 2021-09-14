@@ -27,14 +27,12 @@ export default {
 @import '../global';
 
 .herois {
+    background-color: black;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
-	margin-bottom: 50px;
-
 
 	img {
 		width: 100%;
