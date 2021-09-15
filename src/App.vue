@@ -4,6 +4,8 @@
 	<NavNews />
 	<SecHeroes />
 	<GridHeroes />
+    <FinalSection />
+    <Footer />
 </template>
 
 <script>
@@ -12,6 +14,8 @@ import Introduction from './components/Sec_introduction.vue'
 import NavNews from './components/Nav_news.vue'
 import SecHeroes from './components/Sec_heroes.vue'
 import GridHeroes from './components/Sec_grid_heroes.vue'
+import Footer from './components/Footer.vue'
+import FinalSection from './components/Sec_final.vue'
 
 export default {
 	name: 'App',
@@ -20,7 +24,9 @@ export default {
 		Introduction,
 		NavNews,
 		SecHeroes,
-		GridHeroes
+		GridHeroes,
+        FinalSection,
+        Footer,
 	}
 }
 </script>
