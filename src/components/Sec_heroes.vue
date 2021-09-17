@@ -1,22 +1,26 @@
 <template>
-	<section class="herois">
-		<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/home/heroes_full.jpg" alt="">
-		<div class="content">
-			<h1>QUEM VOCÊ ESCOLHERÁ?</h1>
-			<div class="divisor"></div>
-			<h3>De engenhosos magos a brutamontes destemidos, passando por rebeldes astutos, a gama de heróis do Dota 2 é enorme e incrivelmente diversa. Lance habilidades incríveis e Ultimates devastadoras no seu caminho para a vitória.</h3>
-			<a href="/"> VER TODOS OS HERÓIS </a>
-		</div>
-	</section>
+    <section class="herois">
+        <div class="main-title">
+            <h1>QUEM VOCÊ </h1>
+            <h2>ESCOLHERÁ?</h2>
+        </div>
+        <div class="divisor"></div>
+        <div class="sub-title">
+            <h3>De engenhosos magos a brutamontes destemidos, passando por rebeldes astutos, a gama de heróis do Dota 2 é enorme e incrivelmente diversa. Lance habilidades incríveis e Ultimates devastadoras no seu caminho para a vitória.</h3>
+            <a href="/"> VER TODOS OS HERÓIS </a>
+        </div>
+        <GridHeroes />
+    </section>
 </template>
 
 <script>
-//import GridHeroes from './Sec_grid_heroes.vue'
+import GridHeroes from './Sec_grid_heroes.vue'
 
 export default {
-	name: 'App',
-	components: {
-	}
+    name: 'App',
+    components: {
+        GridHeroes
+    }
 }
 </script>
 
@@ -25,46 +29,50 @@ export default {
 @import '../global';
 
 .herois {
-    background-color: black;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    //Image
+    background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/home/heroes_full.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-	img {
-		width: 100%;
-		max-width: 1600px;
-	}
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
-	.content{
-		position: absolute;
-		bottom: 0px;
-		width: 1000px;
-		align-self: center;
-		max-width: 50%;
-		background-color: none;
+    img {
+        width: 100%;
+        max-width: 1600px;
+    }
 
+    .main-title {
+        margin-top: 900px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap:10px;
 
-		h1{
-			color: white;
-			font-size: 70px;
-		}
-		h3 {
-			color:white;
-			font-size: 14pt;
-		}
-		a{
+        h1{
+            font-size: 70px;
+        }
+        h2 {
+            font-size: 100px;
+        }
+    }
+
+    .sub-title {
+        max-width: 1000px;
+        text-align: center;
+        a{
+            margin: 0 auto;
+            width: 500px;
             @include botao;
             text-align: center;
             padding: 10px;
             font-size: 20pt;
-		}
-	}
+        }
+    }
 }
 </style>

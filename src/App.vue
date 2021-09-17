@@ -3,7 +3,6 @@
 	<Introduction />
 	<NavNews />
 	<SecHeroes />
-	<GridHeroes />
     <FinalSection />
     <Footer />
 </template>
@@ -13,7 +12,6 @@ import Header from './components/Header.vue'
 import Introduction from './components/Sec_introduction.vue'
 import NavNews from './components/Nav_news.vue'
 import SecHeroes from './components/Sec_heroes.vue'
-import GridHeroes from './components/Sec_grid_heroes.vue'
 import Footer from './components/Footer.vue'
 import FinalSection from './components/Sec_final.vue'
 
@@ -24,7 +22,6 @@ export default {
 		Introduction,
 		NavNews,
 		SecHeroes,
-		GridHeroes,
         FinalSection,
         Footer,
 	}
@@ -45,6 +42,15 @@ Fontes :
 
 .divisor {
     @include divisor;
+}
+
+.main-title {
+    h1 {
+        color:#E2DACE90;
+    }
+    h2 {
+        color: #e2dace;
+    }
 }
 
 *{

@@ -137,7 +137,6 @@ export default {
 
 <style lang="scss" scoped>
 .grid-herois {
-    background-color: black;
     height: 800px;
     overflow: hidden;
     background-position: repeat-x;
