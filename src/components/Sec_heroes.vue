@@ -16,6 +16,24 @@
 <script>
 import GridHeroes from './Sec_grid_heroes.vue'
 
+
+// <------------------- ADICIONA ISSO NO CLICO DE VIDA DO COMPONENTE
+window.addEventListener("load", () => {
+    let titulo_animado = document.querySelector('.main-title')
+    const callback = (e) => { 
+        if( e[0].isIntersecting ){
+            // Aqui seta as propriedades dele visivel
+        }else{
+            // Aqui seta ele apagado
+        }
+    }
+    // Observador
+    let observer = new IntersectionObserver(callback, { threshold: [1] });
+    observer.observe(titulo_animado);
+}, false);
+// --------------------------------
+
+
 export default {
     name: 'App',
     components: {
