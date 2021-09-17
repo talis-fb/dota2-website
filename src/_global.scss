@@ -8,3 +8,26 @@ Fontes :
 
 // Variaveis
 $font: 'Vollkorn';
+
+@mixin botao(){
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 3px solid grey;
+    border-radius: 10px;
+    background: none;
+    &:hover{
+        border-color: #ff6046; 
+        transition-duration: 0.2s;
+        transform: translateY(-3px);
+    }
+}
+
+@mixin divisor(){
+    width: 80px;
+    height:3px;
+    border-radius: 1px;
+    background-color: #ff6046;
+}

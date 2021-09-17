@@ -5,9 +5,7 @@
 			<h1>QUEM VOCÊ ESCOLHERÁ?</h1>
 			<div class="divisor"></div>
 			<h3>De engenhosos magos a brutamontes destemidos, passando por rebeldes astutos, a gama de heróis do Dota 2 é enorme e incrivelmente diversa. Lance habilidades incríveis e Ultimates devastadoras no seu caminho para a vitória.</h3>
-			<a href="/">
-				Ver todos os heróis
-			</a>
+			<a href="/"> VER TODOS OS HERÓIS </a>
 		</div>
 	</section>
 </template>
@@ -45,7 +43,13 @@ export default {
 		width: 1000px;
 		align-self: center;
 		max-width: 50%;
-		background-color: grey;
+		background-color: none;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
 
 		h1{
 			color: white;
@@ -56,12 +60,10 @@ export default {
 			font-size: 14pt;
 		}
 		a{
-			color: white;
-			display: inline-block;
-			padding: 5px;
-			border: 3px solid grey;
-			border-radius: 10px;
-
+            @include botao;
+            text-align: center;
+            padding: 10px;
+            font-size: 20pt;
 		}
 	}
 }

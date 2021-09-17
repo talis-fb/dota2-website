@@ -149,7 +149,7 @@ export default {
         height: 175px; // Definir a altura proxima ao dos blocos dos herois obriga ele à ficar em uma unica linha, com overflow fora da tela
     }
     .grid-line {
-        animation: moveSlideshow 10s linear infinite; 
+        animation: moveSlideshow 28s linear infinite; 
     }
     .grid-1{
         animation-direction: normal;

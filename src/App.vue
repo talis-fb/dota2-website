@@ -43,6 +43,10 @@ Fontes :
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Alegreya:wght@400;500&family=Vollkorn:wght@400;500&display=swap');
 /********/
 
+.divisor {
+    @include divisor;
+}
+
 *{
 	margin: 0;
 	border:0;

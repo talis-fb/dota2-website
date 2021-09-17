@@ -26,6 +26,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../_global.scss';
+
 header{
 	position: absolute;
 	top:0;
@@ -65,17 +67,7 @@ header{
 	}
 
 	a{
-		color: white;
-		display: flex;
-		align-items: center;
-		padding: 5px;
-		border: 3px solid grey;
-		border-radius: 10px;
-		&:hover{
-			border-color: orangered;
-			transition-duration: 0.2s;
-			transform: translateY(-3px);
-		}
+        @include botao; 
 	}
 }
 

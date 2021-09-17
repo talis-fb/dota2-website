@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import '../_global.scss';
 section {
 	position: relative;
 	height: 100%;
@@ -53,9 +53,7 @@ section {
 		}
 
 		.divisor{
-			width: 80px;
-			height:5px;
-			background-color: rgb(162, 23, 0);
+            @include divisor;
 		}
 
 		a{
