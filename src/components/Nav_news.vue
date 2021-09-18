@@ -1,38 +1,21 @@
 <template>
-	<section class="sections-news">
-		<section class="news">
-			<header>
-				<span class="title">Últimas Noticias</span>
-				<span class="sub-title">Ver todas </span>
-			</header>
-			<main>
-				<div class="bloco-new">
-					<div class="content">
-						<h3>5 de agosto de 2021</h3>
-						<h2>Pacote de Nível de Batalha</h2>
-						<div class="detalhes">
-							<span>O Pacote de Nível de Batalha do Nemestício de 2021 chegou, trazendo a oportunidade para portadores do passe de batalha avançarem mais a fundo na lista de recompensas com um grande...</span>
-						</div>
-					</div>
-				</div>
-				<div class="bloco-new">
-					<div class="content">
-						<h3>5 de agosto de 2021</h3>
-						<h2>Pacote de Nível de Batalha</h2>
-						<div class="detalhes">
-							<span>O Pacote de Nível de Batalha do Nemestício de 2021 chegou, trazendo a oportunidade para portadores do passe de batalha avançarem mais a fundo na lista de recompensas com um grande...</span>
-						</div>
-					</div>
-				</div>
-				<div class="bloco-new">
-					<div class="content">
-						<h3>5 de agosto de 2021</h3>
-						<h2>Pacote de Nível de Batalha</h2>
-						<div class="detalhes">
-							<span>O Pacote de Nível de Batalha do Nemestício de 2021 chegou, trazendo a oportunidade para portadores do passe de batalha avançarem mais a fundo na lista de recompensas com um grande...</span>
-						</div>
-					</div>
-				</div>
+    <section class="sections-news">
+        <section class="news">
+            <header>
+                <span class="title">Últimas Noticias</span>
+                <span class="sub-title">Ver todas </span>
+            </header>
+            <main>
+                <div class="bloco-new" :style="{ 'background-image': `url(${n.img})` }" v-for="n of news" :key="n.title" >
+                    <div class="content">
+                        <h3>{{ n.date }}</h3>
+                        <h2>{{ n.title }}</h2>
+                        <div class="detalhes">
+                            <span>{{ n.content }}</span>
+                        </div>
+                        <div class="shadow-layer"></div>
+                    </div>
+                </div> 
 			</main>
 		</section>
 	</section>
@@ -40,15 +23,29 @@
 
 <script>
 //<img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/3703047/deaae2bcc11b7ef6963ade2793e8f619ed20546a.jpg" alt="">
+
+export default {
+    name: 'App',
+    data: function(){
+        return { 
+            news: [ { 
+                img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/3703047/aaa99b58717192fd28e828ac3f2962c2c9357587.jpg', 
+                title: 'O International está chegando', date: '16 de setembro de 2021',  content: 'Estamos felizes de anunciar que, depois de muita consideração, a venda de ingressos para assistir ao evento principal do International 2021 presencialmente em Bucareste na...'
+            },{
+                img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/3703047/8fb4c8928c49a685500fa625bfcd518a082c983c.png',
+                title: 'Venda de ingressos para o International 2021', date: '3 de setembro de 2021',  content: 'Até que enfim, as melhores equipes de Dota do mundo se reunirão em outubro para travar a décima batalha pela Égide dos Campeões.'
+            },{
+                img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/3703047/22b89b3523cfa585881e29d773ef8fbd87d22ee0.jpg', 
+                title: 'Atualização do Dota+ do outono de 2021', date: '1 de setembro de 2021',  content: 'O sol do verão começa a se distanciar dos terrenos do Dota, abrindo caminho para o outono e avisando aos smeevils que chegou a hora de mais uma atualização sazonal para o Dota+.'
+            }]
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>
 .sections-news{
-	background-color: black;
-	padding-top: 30px;
-	padding-bottom: 30px;
 	.news{
-		background-color: black;
 		width: 1200px;
 		margin: 0 auto;
 		color: white;
@@ -81,6 +78,22 @@
 				background-size: cover;
 				background-position: center;
 				.content{
+                    position: relative;
+                    .shadow-layer {
+                        position: absolute;
+                        background: rgba(0, 0, 0, 0) linear-gradient(rgba(19, 23, 28, 0) 60%, rgba(19, 23, 28, 0.733) 70%, rgb(19, 23, 28) 90%) repeat scroll 0% 0%;
+                        width: 100%;
+                        height: 100%;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 0;
+                    }
+                    & > * {
+                        z-index: 1;
+                    }
+                    padding: 10px;
+                    text-align: left;
 					height: 100%;
 					width: 100%;
 					display: flex;

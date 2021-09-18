@@ -17,6 +17,8 @@
 				</div>
 			</a>
 		</div>
+
+        <div class="shadow-layer"></div>
 	</section>
 </template>
 
@@ -29,6 +31,16 @@ export default {
 <style lang="scss" scoped>
 @import '../_global.scss';
 section {
+
+    .shadow-layer{
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        bottom: 0;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0.7)), color-stop(100%, black));
+    }
+    
+
 	position: relative;
 	height: 100%;
 	.label{

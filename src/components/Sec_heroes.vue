@@ -1,5 +1,6 @@
 <template>
     <section class="herois">
+        <div class="shadow-layer"></div>
         <div class="main-title" :style="style_title" >
             <h1>QUEM VOCÊ </h1>
             <h2>ESCOLHERÁ?</h2>
@@ -57,6 +58,14 @@ export default {
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    .shadow-layer{
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0) linear-gradient(to top, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.733) 90%, rgb(0, 0, 0) 100%) repeat scroll 0% 0%;
+    }
 
     img {
         width: 100%;
