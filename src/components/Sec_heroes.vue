@@ -1,6 +1,6 @@
 <template>
     <section class="herois">
-        <div class="main-title">
+        <div class="main-title" :style="style_title" >
             <h1>QUEM VOCÊ </h1>
             <h2>ESCOLHERÁ?</h2>
         </div>
@@ -16,28 +16,26 @@
 <script>
 import GridHeroes from './Sec_grid_heroes.vue'
 
-
-// <------------------- ADICIONA ISSO NO CLICO DE VIDA DO COMPONENTE
-window.addEventListener("load", () => {
-    let titulo_animado = document.querySelector('.main-title')
-    const callback = (e) => { 
-        if( e[0].isIntersecting ){
-            // Aqui seta as propriedades dele visivel
-        }else{
-            // Aqui seta ele apagado
-        }
-    }
-    // Observador
-    let observer = new IntersectionObserver(callback, { threshold: [1] });
-    observer.observe(titulo_animado);
-}, false);
-// --------------------------------
-
-
 export default {
     name: 'App',
     components: {
         GridHeroes
+    },
+    data: function(){
+        return {
+            state_visibility_title: false
+        }
+    },
+    computed: {
+        style_title: function(){
+            return this.state_visibility_title ? { opacity: 1, transform: 'translateY(-50px)' } : { opacity: 0, transform: 'translateY(0px)' }
+        }
+    },
+    mounted: function(){
+        let titulo_animado = document.querySelector('.main-title')
+        const callback = (e) => this.state_visibility_title = !!e[0].isIntersecting // Retorna um booleano, que esta relacionado se o está na tela atual
+        let observer = new IntersectionObserver(callback, { threshold: [0.5] }) // Observador
+        observer.observe(titulo_animado);
     }
 }
 </script>
@@ -66,6 +64,7 @@ export default {
     }
 
     .main-title {
+        transition: ease 1s;
         margin-top: 900px;
         display: flex;
         flex-direction: column;
