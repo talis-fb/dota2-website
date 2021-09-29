@@ -59,6 +59,8 @@ export default {
     align-items: center;
     gap: 10px;
 
+    overflow: hidden;
+
     .shadow-layer{
         pointer-events: none;
         position: absolute;

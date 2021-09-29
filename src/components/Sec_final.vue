@@ -3,7 +3,7 @@
         <div class="title">JUNTE-SE <br /> À BATALHA</div>
         <div class="divisor"></div>
         <!-- <div ></div> -->
-        <button class="jogue-agora">JOGUE GRATUITAMENTE AGORA</button>
+         <a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank"><button class="jogue-agora">JOGUE GRATUITAMENTE AGORA</button></a>
     </section>
 </template>
 

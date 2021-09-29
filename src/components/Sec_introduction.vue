@@ -1,15 +1,15 @@
 <template>
-	<section >
+	<section class="intro">
 		<div class="video-background">
 			<video type="video/mp4" autoplay loop muted src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/homepage/dota_montage_02.mp4"></video>
 		</div>
 
-		<div class="label">
+		<div class="label" :style="style_title">
 			<div class="main">
 				"A MODERN MULTIPLAYER MASTERPIECE."
 			</div>
 			<div class="divisor"></div>
-			<a href="https://store.steampowered.com/app/570/Dota_2/">
+			<a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank" >
 				<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam.svg" alt="">
 				<div>
 					<h3>PLAY FOR FREE</h3>
@@ -24,7 +24,23 @@
 
 <script>
 export default {
-	
+    name: 'title',
+    data: function(){
+        return {
+            state_visibility_title: false
+        }
+    },
+    computed: {
+        style_title: function(){
+            return this.state_visibility_title ? { opacity: 1, transform: 'translateX(30px)' } : { opacity: 0, transform: 'translateX(0px)' }
+        }
+    },
+    mounted: function(){
+        let titulo_animado = document.querySelector('.intro > .label')
+        const callback = (e) => this.state_visibility_title = !!e[0].isIntersecting // Retorna um booleano, que esta relacionado se o está na tela atual
+        let observer = new IntersectionObserver(callback, { threshold: [0.5] }) // Observador
+        observer.observe(titulo_animado);
+    }
 }
 </script>
 
@@ -44,6 +60,7 @@ section {
 	position: relative;
 	height: 100%;
 	.label{
+        transition: ease 1.5s;
 		font-family: 'Laila', sans-serif;
 		top: 0;
 		position: absolute;
@@ -105,5 +122,6 @@ section {
 video {
 	width:100%;
 	top:0;
+    opacity: 0.6;
 }
 </style>
