@@ -84,7 +84,7 @@ export default {
     }
 
     &:hover {
-        z-index: 5;
+        z-index: 3;
         transform: scale(1.25);
 
         box-shadow:inset 0px -20px 30px black;

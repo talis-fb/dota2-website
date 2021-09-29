@@ -6,16 +6,19 @@
                 <span class="sub-title">Ver todas </span>
             </header>
             <main>
-                <div class="bloco-new" :style="{ 'background-image': `url(${n.img})` }" v-for="n of news" :key="n.title" >
-                    <div class="content">
-                        <h3>{{ n.date }}</h3>
-                        <h2>{{ n.title }}</h2>
-                        <div class="detalhes">
-                            <span>{{ n.content }}</span>
-                        </div>
-                        <div class="shadow-layer"></div>
-                    </div>
+
+                <div class="bloco-new" :style="{ 'background-image': `url(${n.img})` }" 
+                     v-for="n of news" :key="n.title" >
+                     <div class="content">
+                         <h3>{{ n.date }}</h3>
+                         <h2>{{ n.title }}</h2>
+                         <div class="detalhes">
+                             <span>{{ n.content }}</span>
+                         </div>
+                         <div class="shadow-layer"></div>
+                     </div>
                 </div> 
+
 			</main>
 		</section>
 	</section>
@@ -77,6 +80,14 @@ export default {
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: center;
+
+                border-bottom: 3px solid grey;
+                transition: ease 0.2s;
+                &:hover {
+                    transform: scale(1.03);
+                    border-bottom: 6px solid #ff6046;
+                }
+
 				.content{
                     position: relative;
                     .shadow-layer {
@@ -99,12 +110,12 @@ export default {
 					display: flex;
 					flex-direction: column;
 					justify-content: flex-end;
-					transition: 0.3s;
+					transition: ease 0.3s;
 					.detalhes{
 						display: none;
 					}
 					&:hover{
-						border-bottom: 3px solid red;
+                        background: rgba(0,0,0,.7);
 						.detalhes{
 							display: block;
 						}

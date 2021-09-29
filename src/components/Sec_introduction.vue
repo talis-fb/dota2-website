@@ -1,7 +1,7 @@
 <template>
 	<section >
 		<div class="video-background">
-			<video type="video/mp4" autoplay src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/homepage/dota_montage_02.mp4"></video>
+			<video type="video/mp4" autoplay loop muted src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/homepage/dota_montage_02.mp4"></video>
 		</div>
 
 		<div class="label">
