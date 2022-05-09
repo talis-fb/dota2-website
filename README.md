@@ -1,6 +1,9 @@
 # Clone Website Dota 2
 
-<video width="100%" src="preview.mp4" autoplay></video>
+![Screenshot1](./screenshot1.png)
+![Screenshot2](./screenshot2.png)
+
+---
 
 ## Original site: [www.dota2.com](https://www.dota2.com/home)
 
