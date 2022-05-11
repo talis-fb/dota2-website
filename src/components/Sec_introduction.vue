@@ -46,8 +46,8 @@ export default {
 
 <style lang="scss" scoped>
 @import '../_global.scss';
-section {
 
+section {
     .shadow-layer{
         position: absolute;
         width: 100%;
@@ -55,7 +55,6 @@ section {
         bottom: 0;
         background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0.7)), color-stop(100%, black));
     }
-    
 
 	position: relative;
 	height: 100%;
@@ -115,7 +114,6 @@ section {
 				transform: translateY(-3px);
 			}
 		}
-
 	}
 }
 
